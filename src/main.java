@@ -4,9 +4,16 @@ public class main {
 //        Blinker blinker = new Blinker();
 //        blinker.setAlive(game);
         Glider glider = new Glider();
-        glider.setAlive(game);
+//        glider.setAlive(game);
 //        RandomCell randomCell = new RandomCell();
 //        randomCell.setAlive(game);
+
+        Blinker blinker = new Blinker();
+        Characters[] charactersArray = new Characters[] {blinker, glider};
+
+        for (Characters character : charactersArray) {
+            character.setAlive(game);
+        }
 
         game.printBoard();
 

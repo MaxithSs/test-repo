@@ -71,21 +71,21 @@ public class testClass {
     //checking positions of cells
     private int getState(int x, int y) {
 
-        int returnX = x;
-        int returnY = y;
-
-        if (x < 0) {
-            returnX = gameBoard[gameBoard.length - 1][y];
-        }
-
-        if (x > width)
-            returnX = gameBoard[0][y];
-
-        if (y < 0)
-            returnY = gameBoard[x][gameBoard[0].length -1];
-
-        if (y > 0)
-            returnY = gameBoard[x][0];
+//        int returnX = x;
+//        int returnY = y;
+//
+//        if (x < 0) {
+//            returnX = gameBoard[gameBoard.length - 1][y];
+//        }
+//
+//        if (x > width)
+//            returnX = gameBoard[0][y];
+//
+//        if (y < 0)
+//            returnY = gameBoard[x][gameBoard[0].length -1];
+//
+//        if (y > 0)
+//            returnY = gameBoard[x][0];
 
         if (x < 0 || (y < 0 || y > height))
             return this.gameBoard[gameBoard.length - 1][y];
@@ -98,7 +98,7 @@ public class testClass {
         if (y > height || x < 0 || x > width)
             return this.gameBoard[x][0];
 
-        return this.gameBoard[returnX][returnY];
+        return this.gameBoard[x][y];
     }
 
     //setting cells alive
